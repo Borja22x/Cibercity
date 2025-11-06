@@ -28,7 +28,7 @@ h1{
     font-family: var(--fuente-titulos);
     color: var(--color-principal);
     text-align: center;
-    font-size: 90px;
+    font-size: 150px;
     margin-top: 150px;
     animation-name: led-title;
     /* Duración de cada ciclo de la animación (más largo para que sea lento) */
