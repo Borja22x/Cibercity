@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="pantallaJuego.css">
 </head>
 <body>
+    <h1>Ronda (num)</h1>
     <section id="ciudad">
         <div id="edificioAzul" class="azul">
             <button class="ventana"></button>
@@ -57,9 +58,24 @@
             <button class="ventana"></button>
             <button class="ventana"></button>
         </div>
-  </section>
-  <section id="menu">
-        
+    </section>
+    <section id="menu">
+        <div id="info-jugador">
+            <h2>Turno de: (nombre)</h2>
+            <h3>Dinero: (bitcoin)</h3>
+            <h3>Rol: (rol)</h3>
+            <p>Has conseguido X bitcoin.</p>
+        </div>
+        <h3>Tus cartas:</h3>
+        <div id="cartas-jugador">
+
+        </div>
+        <article></article>
+        <p>¿Qué deseas hacer?</p>
+        <div id="botones-accion">
+            <button id="construir">Construir</button>
+            <button id="robar">Robar carta</button>
+        </div>
     </section>
 
     <script src="luces.js"></script>
