@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Personaje</title>
+    <link rel="stylesheet" href="seleccionPersonaje.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Fondo -->
+        <div class="background"></div>
+
+        <!-- Contenido principal -->
+         <p id="personaje-nombre"></p>
+        <div class="selector">
+            
+            <button id="btn-left" class="arrow left">◀</button>
+
+                <div class="personaje-info">
+                    <img id="personaje-img" src="" alt="Personaje">
+                    
+                </div>
+
+            <button id="btn-right" class="arrow right">▶</button>
+
+        </div>
+
+        <button id="btn-select" class="select-btn">SELECCIONAR</button>
+
+    </div>
+
+    <!-- sonidos -->
+    <audio id="sonido-cambiar" src="sonidosSeleccionPersonaje/sonido1.mp3"></audio>
+    <audio id="sonido-seleccionar" src="sonidosSeleccionPersonaje/sonido2.mp3"></audio>
+
+    <script src="seleccionPersonaje.js"></script>
+</body>
+</html>
