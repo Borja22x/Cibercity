@@ -29,7 +29,7 @@ h1{
     color: var(--color-principal);
     text-align: center;
     font-size: 150px;
-    margin-top: 150px;
+    margin-top: 5vh;
     animation-name: led-title;
     /* Duración de cada ciclo de la animación (más largo para que sea lento) */
     animation-duration: 1.5s; 
@@ -54,7 +54,7 @@ h1{
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-top: 190px;
+    margin-top: 2vh;
 }
 
 button{
