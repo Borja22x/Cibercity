@@ -137,7 +137,7 @@ p{
 }
 
 #botonAtras{
-    animation: entrada-section 3s ease forwards;
+    animation: entrada-boton 3s ease forwards;
 }
 
 @keyframes entrada-boton {
