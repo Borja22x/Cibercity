@@ -8,6 +8,7 @@ body {
   justify-content: left;
   color: white;
   font-family: 'minecraft';
+  cursor: url("../cursor/cursor.png"), auto;
 }
 
 h1{
@@ -165,100 +166,148 @@ button:disabled {
 }
 
 #menu{
+  color: #E4E4FF;
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: rgba(46, 46, 46, 0.6);
+  background: rgba(12, 10, 32, 0.85);
   width: 680px;
-  height: 97vh;
+  height: 95vh;
   margin-left: 20px;
-  border-radius: 10px;
-  padding: 4px 15px;
+  border: 1px solid #6C63FF;
+  border-radius: 12px;
+  box-shadow: 0 0 22px #6C63FF60;
+  padding: 10px 18px;
   overflow: hidden;
+  font-family: 'minecraft', sans-serif;
 }
 
+/* ==== PANEL SUPERIOR: INFO JUGADOR ==== */
 #info-jugador{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: rgba(34, 34, 109, 0.5);
-  border: solid rgb(190, 190, 190) 1px;
-  box-shadow: 0px 0px 20px rgb(80, 80, 192);
+
+  background: rgba(20, 16, 60, 0.55);
+  border: 1px solid #7d74ff;
+  box-shadow: 0 0 18px #6C63FF60;
+
   margin-top: 10px;
-  padding-left: 20px;
   margin-bottom: 20px;
+  padding: 12px 20px;
+  border-radius: 10px;
 }
 
+/* ==== CARTAS ==== */
 #cartas-jugador{
   display: flex;
   align-items: flex-start;
-  background-color: rgba(12, 44, 12, 0.5);
-  border: solid rgb(190, 190, 190) 1px;
-   box-shadow: 0px 0px 20px rgb(24, 92, 29);
+
+  background: rgba(8, 40, 20, 0.35);
+  border: 1px solid #33ffb0;
+  box-shadow: 0 0 14px #00ffaa40;
+
   margin-top: 10px;
-  padding-left: 20px;
+  padding: 20px;
+  border-radius: 10px;
+
   height: 400px;
 }
 
+/* ==== TEXTOS ==== */
 h2{
   font-size: 22px;
-  margin: 0px;
+  margin: 0;
 }
-
+/* 
 h2::after{
-  content: '💵';
-}
+  content: ' 💵';
+} */
 
 h3{
   font-size: 16px;
-  margin: 0px;
+  margin: 0;
 }
 
 p{
-  font-size: 12px;
+  font-size: 13px;
+  margin-top: 6px;
 }
 
+/* ==== BOTONES ==== */
 #botones-accion{
   display: flex;
+  align-content: space-between;
   background-color: unset;
-  width: 640px;
-  border: unset;
+  border: none;
 }
 
-#botones-accion > button{
-  width: 300px;
-  height: 50px;
-  border-radius: 10px;
-  color: rgb(224, 224, 224);
-  font-size: 17px;
+#botones-accion > button {
+  position: relative;
+  width: 48%;
+  height: 55px;
+  font-size: 18px;
   font-weight: 600;
-}
-
-#construir{
-  background-color: rgb(177, 81, 255, 0.7);
-  border: solid rgb(81, 34, 119) 2px;
-  transition: transform 0.3s ease-in-out;
-}
-
-#robar{
-  background-color: rgba(196, 66, 66, 0.7);
-  border: solid rgb(128, 1, 1) 2px;
-  transition: transform 0.2s ease-in-out;
-}
-
-#construir:hover, #robar:hover{
+  border: none;
+  border-radius: 12px;
+  color: #fff;
   cursor: pointer;
-  transform: translateY(-6px); 
+  letter-spacing: 1px;
+
+  background: #1a1a2e;
+  overflow: hidden;
+  transition: 0.25s;
 }
 
-#construir:hover{
-  background-color: rgba(96, 44, 138, 0.7);
+/* ===== EFECTO NEÓN EN HOVER (CONSTRUCCIÓN) ===== */
+#construir:hover {
+  background: #6C63FF;
+  box-shadow: 0 0 15px #6C63FF, 
+              0 0 40px #6C63FF;
+  transform: scale(1.06);
 }
 
-#robar:hover{
-  background-color: rgba(121, 32, 32, 0.7);
+/* ===== EFECTO NEÓN EN HOVER (ROBAR) ===== */
+#robar:hover {
+  background: #FF0055;
+  box-shadow: 0 0 15px #FF0055,
+              0 0 40px #FF0055;
+  transform: scale(1.06);
 }
 
+/* ===== RAYO SUPERIOR AL PASAR EL RATÓN ===== */
+#botones-accion > button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, white, transparent);
+  transition: 0.5s;
+}
+
+/* movimiento del rayo */
+#botones-accion > button:hover::before {
+  left: 100%;
+}
+
+/* ===== EFECTO DE BRILLO INTERIOR SUAVE ===== */
+#botones-accion > button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(22px);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+#botones-accion > button:hover::after {
+  opacity: 0.6;
+}
+
+/* ==== FUENTE ==== */
 @font-face {
   font-family: 'minecraft';
   src: url('../fuentes/MinecraftStandard.otf') format('truetype');
