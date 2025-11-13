@@ -77,7 +77,7 @@ btnSelect.addEventListener("click", () => {
 
     // Espera un momento para que el sonido se escuche
     setTimeout(() => {
-        window.location.href = "../pantallajuego/pantallajuego.html";
+        window.location.href = "../pantallaCarga/pantallaCarga.html";
     }, 300);
 }
 
