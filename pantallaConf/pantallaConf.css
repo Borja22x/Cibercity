@@ -1,0 +1,186 @@
+:root {
+  --color-principal: white;
+  --color-fondo-tarjeta: rgba(0, 0, 0, 0.6);
+  --color-sombra: rgba(164, 196, 255, 0.3);
+  --color-boton-hover: rgba(164, 196, 255, 0.5);
+  --color-brillo-inicial: rgb(164, 196, 255);
+  --color-brillo-final: rgba(124, 170, 255, 0.3);
+}
+
+@font-face {
+  font-family: 'fuenteTitulo';
+  src: url('../fuentes/Cyber Brush.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'fuentePrincipal';
+  src: url('../fuentes/MinecraftStandard.otf') format('opentype');
+}
+
+body {
+  background: url(../img/fondoConf.png);
+  font-family: 'fuentePrincipal';
+  color: var(--color-principal);
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: 'fuenteTitulo';
+  text-align: center;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  margin: 8vh 0 5vh;
+  animation: animacionTitulo 1.5s infinite alternate;
+}
+
+#titulo {
+  animation: entrada 1s ease forwards;
+}
+
+.config {
+  background: var(--color-fondo-tarjeta);
+  border-radius: 20px;
+  padding: 3vw;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto 2vw;
+  box-shadow: 0 0 20px var(--color-sombra);
+  text-align: center;
+  animation: entrada 2s ease forwards;
+}
+
+p{
+  font-size: 20px;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  flex-wrap: wrap;
+  accent-color: rgba(119, 0, 255, 0.6);
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+#jugadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.2vw;
+  margin: 0 auto 2vw;
+  width: 90%;
+  justify-items: center;
+}
+
+.jugador {
+  background: var(--color-fondo-tarjeta);
+  border-radius: 20px;
+  padding: 2vw;
+  width: 100%;
+  max-width: 180px;
+  box-shadow: 0 0 20px var(--color-sombra);
+  text-align: center;
+  animation: entrada 0.8s ease forwards;
+}
+
+.idtag {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+input[type="text"] {
+  padding: 2px 5px; 
+  height: 18px;     
+  width: 180px;
+  border-radius: 5px;
+  border: none;
+  font-family: 'fuentePrincipal';
+  font-size: 12px;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  max-width: 600px;
+  margin: 3vw auto;
+  gap: 50px;
+  animation: entrada 3s ease forwards;
+}
+
+.btn-enlace {
+  background-color: var(--color-fondo-tarjeta);
+  color: var(--color-principal);
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  box-shadow: 0 0 20px var(--color-sombra);
+}
+
+.btn-enlace:hover {
+  background-color: var(--color-boton-hover);
+  transform: scale(1.05);
+}
+
+
+/* Animaciones */
+@keyframes animacionTitulo {
+  from {
+    text-shadow: 0 0 30px var(--color-brillo-inicial);
+  }
+  to {
+    text-shadow: 0 0 30px var(--color-brillo-final);
+  }
+}
+
+@keyframes entrada {
+  0%, 30% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .botones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .config {
+    padding: 25px;
+  }
+
+  #jugadores {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+
+  .radio-group label {
+    font-size: 16px;
+  }
+
+  input[type="text"] {
+    width: 100px;
+  }
+}
