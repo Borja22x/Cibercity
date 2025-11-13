@@ -90,6 +90,7 @@ body {
 
 /* Flechas */
 .arrow {
+    margin-left: 20px;
     font-size: clamp(2rem, 4vw, 3rem);
     padding: 10px 20px;
     cursor: pointer;
@@ -154,5 +155,64 @@ body {
     .select-btn {
         padding: 10px 20px;
         font-size: 1rem;
+    }
+}
+
+
+.descripcion-box {
+    background: var(--color-fondo-tarjeta);
+    border-radius: 15px;
+    padding: 20px;
+    margin-left: 30px;
+    width: 300px;
+    height: auto;
+    color: var(--color-principal);
+    font-family: 'fuentePrincipal';
+    box-shadow: 0 0 25px var(--color-sombra);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    animation: brillo 2s infinite alternate;
+}
+
+.descripcion-box h2 {
+    font-family: 'fuenteTitulo';
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--color-principal);
+}
+
+.descripcion-box p {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+/* Brillo animado */
+@keyframes brillo {
+    from { box-shadow: 0 0 15px var(--color-sombra); }
+    to { box-shadow: 0 0 25px var(--color-brillo-inicial); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .descripcion-box {
+        width: 250px;
+        margin-left: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .selector {
+        flex-direction: column;
+    }
+
+    .descripcion-box {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 80%;
     }
 }
