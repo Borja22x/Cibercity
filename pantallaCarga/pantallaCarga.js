@@ -38,7 +38,7 @@ const intervalo = setInterval(() => {
 
         setTimeout(() => {
             // Redirigir al menú principal del juego
-            window.location.href = "../pantallaCarga/pantallaCarga.html";
+            window.location.href = "../pantallajuego/pantallajuego.html";
         }, 1000);
     }
 }, 100); // actualiza cada 0.2s
