@@ -25,6 +25,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  cursor: url("../cursor/cursor.png"), auto;
 }
 
 h1 {
@@ -114,6 +115,7 @@ input[type="text"] {
   margin: 3vw auto;
   gap: 50px;
   animation: entrada 3s ease forwards;
+  cursor: url("../cursor/cursor.png"), auto;
 }
 
 .btn-enlace {
@@ -125,6 +127,7 @@ input[type="text"] {
   transition: 0.3s;
   font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   box-shadow: 0 0 20px var(--color-sombra);
+  cursor: url("../cursor/cursor.png"), auto;
 }
 
 .btn-enlace:hover {

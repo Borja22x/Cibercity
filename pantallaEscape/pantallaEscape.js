@@ -2,16 +2,16 @@ document.addEventListener('DOMContentLoaded', function () {
   // Crear menú dinámicamente
   const menuHTML = `
     <!-- HTML dinámico -->
-<div class="menu">
-  <h1>Cibercity</h1>
+<div class="menu-esc">
+  <h1 id="titulo-esc">Cibercity</h1>
   <div class="menu-content">
 
     <div id="botones">
-    <a href="../index.html">Exit to main menu</a>
-    <a href="../pantallajuego/pantallajuego.html" onclick="alert('Juego reiniciado')">Reset game</a>
-    <a href="#">Settings</a>
-    <a href="../gameInfo/gameInfo.html">Info</a>
-    <a href="#" onclick="window.close()">Quit game</a>
+      <a class="boton-esc" href="../index.html">Exit to main menu</a>
+      <a class="boton-esc" href="../pantallajuego/pantallajuego.html" onclick="alert('Juego reiniciado')">Reset game</a>
+      <a class="boton-esc" href="#">Settings</a>
+      <a class="boton-esc" href="../gameInfo/gameInfo.html">Info</a>
+      <a class="boton-esc" href="#" onclick="window.close()">Quit game</a>
     </div>
     </div>
 </div>
