@@ -8,7 +8,6 @@
     --tamaño-fuente-botones: 20px;
 }
 
-
 @font-face {
   font-family: 'fuenteTitulo';
   src: url('fuentes/Cyber\ Brush.ttf') format('truetype');
@@ -22,6 +21,7 @@
 body{
     background-image: url(img/fondoCiudad.png);
     font-family: 'fuentePrincipal';
+    cursor: url("cursor/cursor.png"), auto;
 }
 
 h1{
@@ -57,7 +57,7 @@ h1{
     margin-top: 2vh;
 }
 
-button{
+.btn{
     position: relative;
     background-color: var(--botones-bg);
     border: solid 1px white;
@@ -66,13 +66,17 @@ button{
     height: 60px;
     font-family: 'fuentePrincipal';
     font-size: var(--tamaño-fuente-botones);
+    cursor: url("cursor/cursor.png"), auto;
     transition: 0.2s;
     overflow: hidden;
     box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-button::before {
+.btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -80,6 +84,9 @@ button::before {
     width: 100%;
     height: 100%;
     background: linear-gradient(120deg, transparent, rgba(0,255,255,0.7), transparent);
+
+    pointer-events: none;
+
     animation: move-light 2s linear infinite;
 }
 
@@ -88,13 +95,13 @@ button::before {
     to { left: 100%; }
 }
 
-button:hover {
+.btn:hover {
     color: #0ff;
     text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
     transform: scale(1.1);
 }
 
-a{
+a.btn {
     color: var(--color-principal);
     text-decoration: none;
 }

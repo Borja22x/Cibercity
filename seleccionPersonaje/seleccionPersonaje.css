@@ -29,6 +29,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     overflow: hidden;
+    cursor: url("../cursor/cursor.png"), auto;
 }
 
 /* Contenedor general */
@@ -100,6 +101,7 @@ body {
     color: var(--color-principal);
     box-shadow: 0 0 20px var(--color-sombra);
     transition: 0.3s;
+    cursor: url("../cursor/cursor.png"), auto;
 }
 
 .arrow:hover {
@@ -120,6 +122,7 @@ body {
     box-shadow: 0 0 20px var(--color-sombra);
     font-family: 'fuentePrincipal';
     transition: 0.3s;
+    cursor: url("../cursor/cursor.png"), auto;
 }
 
 .select-btn:hover {

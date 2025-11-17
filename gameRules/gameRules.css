@@ -1,6 +1,7 @@
 body{
     background-image: url(../img/fondoCiudad.png);
     font-family: 'fuentePrincipal';
+    cursor: url("../cursor/cursor.png"), auto;
 }
 
 :root{
@@ -156,6 +157,7 @@ p{
     justify-content: end;
     margin-right: 90px;
     transform: scale(1.5);
+    cursor: url("../cursor/cursor.png"), auto;
 }
 
 @keyframes entrada-volver {
